@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Automatically removes YouTube's adblock enforcement popup
-// @author       You
+// @author       Clayel
 // @match        *://www.youtube.com/*
 // @grant        none
 // ==/UserScript==
