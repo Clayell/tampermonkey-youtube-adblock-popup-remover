@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Automatically removes YouTube's adblock enforcement popup
-// @author       Clayel
+// @author       You
 // @match        *://www.youtube.com/*
 // @grant        none
 // ==/UserScript==
@@ -12,10 +12,18 @@
     'use strict';
 
     const removeEnforcementPopup = () => {
+        // Remove enforcement popup
         const popup = document.querySelector('ytd-enforcement-message-view-model');
         if (popup) {
             popup.remove();
             console.log('YouTube enforcement popup removed.');
+        }
+
+        // Remove overlay backdrop
+        const backdrop = document.querySelector('tp-yt-iron-overlay-backdrop.opened');
+        if (backdrop) {
+            backdrop.remove();
+            console.log('YouTube overlay backdrop removed.');
         }
     };
 
