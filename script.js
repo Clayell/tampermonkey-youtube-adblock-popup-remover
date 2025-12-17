@@ -18,13 +18,6 @@
             popup.remove();
             console.log('YouTube enforcement popup removed.');
         }
-
-        // Remove overlay backdrop
-        const backdrop = document.querySelector('tp-yt-iron-overlay-backdrop.opened');
-        if (backdrop) {
-            backdrop.remove();
-            console.log('YouTube overlay backdrop removed.');
-        }
     };
 
     // Observe dynamic changes to detect when the popup is added
